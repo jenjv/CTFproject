@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Puzzle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Online Puzzle Challenge</h1>
+        <p>Answer all questions to unlock the secret code question!</p>
+        
+        <!-- Question 1 -->
+        <div class="question" id="question-1">
+            <p>1. What is 2 + 2?</p>
+            <input type="text" id="answer-1" placeholder="Your answer here">
+            <button onclick="checkAnswer(1, '4')">Submit</button>
+            <p class="hint">Hint: It’s the first even number after 2.</p>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question" id="question-2" style="display: none;">
+            <p>2. What is the capital of France?</p>
+            <input type="text" id="answer-2" placeholder="Your answer here">
+            <button onclick="checkAnswer(2, 'paris')">Submit</button>
+            <p class="hint">Hint: The city of lights.</p>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question" id="question-3" style="display: none;">
+            <p>3. What color is the sky on a clear day?</p>
+            <input type="text" id="answer-3" placeholder="Your answer here">
+            <button onclick="checkAnswer(3, 'blue')">Submit</button>
+            <p class="hint">Hint: The color of the ocean.</p>
+        </div>
+
+        <!-- Secret Code Question -->
+        <div class="question" id="secret-question" style="display: none;">
+            <p>4. Enter the secret code (hint: how do you find information from a webpage?).</p>
+            <input type="text" id="answer-secret" placeholder="Your answer here">
+            <button onclick="checkSecret()">Submit</button>
+            <p class="hint">Hint: Right-click and inspect.</p>
+        </div>
+
+        <p id="result" style="display: none; font-weight: bold;"></p>
+
+        <!-- Hidden Code -->
+        <!-- Inspect to find the code -->
+        <div style="display: none;">Secret Code: {ctf12345}</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
